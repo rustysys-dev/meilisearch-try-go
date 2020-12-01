@@ -1,12 +1,12 @@
 server-up-test:
 	podman run --rm --pod new:meili-go \
-		--name meilisearch -p 7700:7700 \
+		--name meilisearch-go -p 7700:7700 \
 		-v ${PWD}/data.ms:/data.ms:Z \
 		getmeili/meilisearch
 
 server-up:
 	podman run -d --pod new:meili-go \
-		--name meilisearch -p 7700:7700 \
+		--name meilisearch-go -p 7700:7700 \
 		-v ${PWD}/data.ms:/data.ms:Z \
 		getmeili/meilisearch
 
